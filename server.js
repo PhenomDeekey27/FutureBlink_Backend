@@ -9,6 +9,11 @@ const app = express();
 app.use(express.json());
 
 app.use('/api/email', emailRoutes);
+app.use("/",(req,res)=>{
+  return res.status(200).send({
+    message:"FutureBlink Email sending Backend Get Request Working"
+  })
+})
 
 const PORT = process.env.PORT || 5000;
 
