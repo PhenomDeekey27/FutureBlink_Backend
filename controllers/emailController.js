@@ -3,7 +3,6 @@ const { agenda } = require('../utils/agenda');
 const scheduleEmail = async (req, res) => {
   const { to, subject, body, delay } = req.body;
 
-  console.log(req.body,"resbody")
 
   if (!to || !subject || !body) {
     return res.status(400).json({ message: "Missing fields: to, subject, body required." });
